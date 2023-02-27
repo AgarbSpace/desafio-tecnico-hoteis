@@ -9,7 +9,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.sql.Date;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Entity
 @Data
@@ -17,8 +18,10 @@ import java.sql.Date;
 public class RestrictCpf {
   
 	public RestrictCpf(RestrictCpfDTO data) {
+		LocalDateTime now = LocalDateTime.now();
+		String isoDateTime = now.format(DateTimeFormatter.ISO_DATE_TIME);
+		this.createdAt = isoDateTime + "Z";
 		this.cpf = data.cpf();
-		this.createdAt = data.createdAt();
 	}
 	
 	@Id
@@ -29,5 +32,5 @@ public class RestrictCpf {
 	private String cpf;
 
 	@Column(length = 24, nullable = false)
-	private Date createdAt;
+	private String createdAt;
 }
