@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.desafiohoteis.api.Repository.RestrictCpfRepository;
-import com.desafiohoteis.Utils.StringUtil;
+import com.desafiohoteis.api.Utils.StringUtil;
 import com.desafiohoteis.api.DTO.RestrictCpfDTO;
 import com.desafiohoteis.api.Exceptions.ExistsCpfException;
 import com.desafiohoteis.api.Exceptions.InvalidCpfException;

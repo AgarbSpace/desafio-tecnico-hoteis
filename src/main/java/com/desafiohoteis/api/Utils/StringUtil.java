@@ -1,4 +1,4 @@
-package com.desafiohoteis.Utils;
+package com.desafiohoteis.api.Utils;
 
 import org.apache.commons.lang3.StringUtils;
 
