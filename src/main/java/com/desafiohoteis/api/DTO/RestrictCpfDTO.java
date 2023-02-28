@@ -1,5 +1,7 @@
 package com.desafiohoteis.api.DTO;
 
-public record RestrictCpfDTO(String cpf) {
+import jakarta.validation.constraints.NotBlank;
+
+public record RestrictCpfDTO(@NotBlank String cpf) {
     
 }

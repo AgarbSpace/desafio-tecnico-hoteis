@@ -2,6 +2,8 @@ package com.desafiohoteis.api.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.desafiohoteis.api.Repository.RestrictCpfRepository;
 import com.desafiohoteis.api.DTO.RestrictCpfDTO;
 import com.desafiohoteis.api.Model.RestrictCpf;
@@ -14,6 +16,11 @@ public class RestrictCpfService {
 	RestrictCpfRepository repository;
 
 	public void create(RestrictCpfDTO dto) {
+		boolean cpfExists = repository.existsByCpf(dto.cpf());
+		if (cpfExists) {
+			
+		}
+
 		repository.save(new RestrictCpf(dto));
 	}
 
@@ -21,15 +28,13 @@ public class RestrictCpfService {
 		return repository.findAll();
 	}
 
-	public void update(Long id, RestrictCpfDTO dto) {
-		repository.findById(id).map(
-				cpf -> {
-					cpf.setCpf(dto.cpf());
-					return repository.save(cpf);
-				});
+	@Transactional
+	public void update(String cpf, RestrictCpfDTO dto) {
+		repository.updateCpf(dto.cpf(), cpf);
 	}
 	
-	public void delete(Long id) {
-		repository.deleteById(id);
+	@Transactional
+	public void delete(String cpf) {
+		repository.deleteByCpf(cpf);
 	}
 }

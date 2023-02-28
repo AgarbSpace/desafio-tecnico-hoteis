@@ -31,6 +31,6 @@ public class RestrictCpf {
 	@Column(length = 11, nullable = false)
 	private String cpf;
 
-	@Column(length = 24, nullable = false)
+	@Column(length = 30, nullable = false)
 	private String createdAt;
 }
