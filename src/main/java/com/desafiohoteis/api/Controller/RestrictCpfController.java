@@ -31,6 +31,11 @@ public class RestrictCpfController {
 		return service.read();
 	}
 
+	@GetMapping("/{cpf}")
+	public RestrictCpf readCpf(@PathVariable String cpf) {
+		return service.findByCpf(cpf);
+	}
+
 	@PutMapping("/{cpf}")
 	public void update(@PathVariable String cpf, @RequestBody @Valid RestrictCpfDTO req) {
 		service.update(cpf, req);
