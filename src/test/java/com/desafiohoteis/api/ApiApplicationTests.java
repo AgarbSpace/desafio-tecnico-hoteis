@@ -42,7 +42,7 @@ class ApiApplicationTests {
 
 	private RestrictCpfDTO validCpfDto = new RestrictCpfDTO("12345678910");;
 	private RestrictCpfDTO invalidCpfDto = new RestrictCpfDTO("11111111111");
-	private RestrictCpfDTO updateValidCpfDto = new RestrictCpfDTO("9876543219");
+	private RestrictCpfDTO updateValidCpfDto = new RestrictCpfDTO("98765432198");
 	private RestrictCpfDTO updateInvalidCpfDto = new RestrictCpfDTO("222222222222");
 	private RestrictCpf validCpf = new RestrictCpf(validCpfDto);
 	private RestrictCpf invalidCpf = new RestrictCpf(invalidCpfDto);
