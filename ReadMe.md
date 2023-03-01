@@ -33,7 +33,32 @@ Uma vez que todas essas ferramentas e dependências estejam instaladas e configu
 ```
 <mvn spring-boot:run>
 ```
-,  ou clicando no botão "Run" na sua IDE.
+ou clicando no botão "Run" na sua IDE.
+
+Para rodar utilizando o Docker, certifique-se que tenha ele instalado, utilize o comando 
+
+```
+<mvn package>
+```
+para buildar o projeto e criar uma pasta target com seu arquivo .jar
+Veja se está tudo ok no arquivo Dockerfile
+Faça o build da imagem utilizando o comando
+
+```
+< docker build -t nome-da-imagem . >
+```
+para rodar a imagem utilize 
+
+```
+< docker run -p 8080:8080 nome-da-imagem >
+```
+e para certificar que o contêiner está em execução utilize 
+
+```
+< docker ps >
+```
+Acesse o projeto em um navegador web usando o endereço http://localhost:8080
+
 ## ☕ Usando <Desafio_Técnico_BackEnd>
 
 Para usar <Desafio_Técnico_BackEnd>, siga estas etapas:
