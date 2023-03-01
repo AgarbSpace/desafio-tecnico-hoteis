@@ -16,9 +16,9 @@ import java.util.List;
 @Service
 public class RestrictCpfService {
 
-	String notFoundCpf = "Cpf não encontrado";
-	String numbersAreEqual = "Cpf não pode ter dígitos repetidos";
-	String conflict = "Conflito: Cpf já está na lista ";
+	String notFoundCpf = "Cpf not found";
+	String numbersAreEqual = "Cpf can't have repeated digits";
+	String conflict = "CPF already exists";
   
 	@Autowired
 	RestrictCpfRepository repository;
