@@ -29,18 +29,22 @@ Na raiz do projeto, utilize o comando
 ```
 
 Esse comando irá baixar as dependências do projeto e instalá-las em seu repositório local do Maven.
-Uma vez que todas essas ferramentas e dependências estejam instaladas e configuradas, você pode executar o projeto Spring Boot usando o comando <mvn spring-boot:run>, , ou clicando no botão "Run" na sua IDE.
+Uma vez que todas essas ferramentas e dependências estejam instaladas e configuradas, você pode executar o projeto Spring Boot usando o comando 
 
+```
+<mvn spring-boot:run>
+```
+,  ou clicando no botão "Run" na sua IDE.
 ## ☕ Usando <Desafio_Técnico_BackEnd>
 
 Para usar <Desafio_Técnico_BackEnd>, siga estas etapas:
 
 Caso o programa esteja rodando localmente, basta acessar o endereço <http://localhost:8080/cpf>
-#### O método GET em </cpf> vai trazer a lista de todos os cpfs registrados.
-#### O método GET em </cpf/{cpf}> vai trazer os dados do cpf em específico registrado.
-#### O método POST em </cpf> vai registrar um cpf.
-#### O método PUT em </cpf/{cpf}> vai atualizar aquele cpf específico enviado pelo parâmetro para parâmetro que foi enviado pelo body da requisição.
-#### O método DELETE em </cpf/{cpf}> vai deletar aquele cpf específico do parâmetro.
+##### O método GET em </cpf> vai trazer a lista de todos os cpfs registrados.
+##### O método GET em </cpf/{cpf}> vai trazer os dados do cpf em específico registrado.
+##### O método POST em </cpf> vai registrar um cpf.
+##### O método PUT em </cpf/{cpf}> vai atualizar aquele cpf específico enviado pelo parâmetro para parâmetro que foi enviado pelo body da requisição.
+##### O método DELETE em </cpf/{cpf}> vai deletar aquele cpf específico do parâmetro.
 #### Os métodos POST e PUT esperam um corpo no formato {cpf: String}, sendo o cpf sem formatação xxx.xxx.xxx-xx
 
-[⬆ Voltar ao topo](#Desafio Técnico Backend)<br>
+
