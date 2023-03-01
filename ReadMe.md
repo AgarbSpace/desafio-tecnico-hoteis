@@ -24,14 +24,14 @@ Para instalar o <Desafio_Técnico_BackEnd>, siga estas etapas:
 Na raiz do projeto, utilize o comando
 
 ```
-<mvn clean install>
+mvn clean install
 ```
 
 Esse comando irá baixar as dependências do projeto e instalá-las em seu repositório local do Maven.
 Uma vez que todas essas ferramentas e dependências estejam instaladas e configuradas, você pode executar o projeto Spring Boot usando o comando 
 
 ```
-<mvn spring-boot:run>
+mvn spring-boot:run
 ```
 ou clicando no botão "Run" na sua IDE.
 
@@ -39,24 +39,24 @@ Para rodar utilizando o Docker, certifique-se que tenha ele instalado.
 - Caso dentro da sua pasta target não tenha um arquivo .jar, utilize o comando:
 
 ```
-<mvn package>
+mvn package
 ```
 Para buildar o projeto e criar uma pasta target com seu arquivo .jar
 Veja se está tudo ok no arquivo Dockerfile
 Faça o build da imagem utilizando o comando:
 
 ```
-< docker build -t nome-da-imagem . >
+docker build -t nome-da-imagem . 
 ```
 Para rodar a imagem utilize:
 
 ```
-< docker run -p 8080:8080 nome-da-imagem >
+docker run -p 8080:8080 nome-da-imagem 
 ```
 E para certificar que o contêiner está em execução utilize:
 
 ```
-< docker ps >
+docker ps
 ```
 Acesse o projeto em um navegador web usando o endereço http://localhost:8080
 
