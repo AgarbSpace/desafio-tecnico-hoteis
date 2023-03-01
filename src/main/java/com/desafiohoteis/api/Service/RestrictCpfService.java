@@ -17,7 +17,7 @@ import java.util.List;
 public class RestrictCpfService {
 
 	String notFoundCpf = "Cpf not found";
-	String numbersAreEqual = "Cpf can't have repeated digits";
+	String notValidCpf = "Cpf is not valid";
 	String conflict = "CPF already exists";
   
 	@Autowired
@@ -33,8 +33,8 @@ public class RestrictCpfService {
 
 		boolean allNumbersAreEqual = StringUtil.allNumbersAreEqual(cpf);
 
-		if (allNumbersAreEqual) {
-			throw new InvalidCpfException(numbersAreEqual);
+		if (allNumbersAreEqual || cpf.length() != 11) {
+			throw new InvalidCpfException(notValidCpf);
 		}
 
 		repository.save(new RestrictCpf(dto));
@@ -47,8 +47,8 @@ public class RestrictCpfService {
 	public RestrictCpf findByCpf(String cpf) {
 		boolean allNumbersAreEqual = StringUtil.allNumbersAreEqual(cpf);
 
-		if (allNumbersAreEqual) {
-			throw new InvalidCpfException(numbersAreEqual);
+		if (allNumbersAreEqual || cpf.length() != 11) {
+			throw new InvalidCpfException(notValidCpf);
 		}
 		
 		boolean cpfExists = repository.existsByCpf(cpf);
@@ -65,8 +65,8 @@ public class RestrictCpfService {
 	public void update(String cpf, RestrictCpfDTO dto) {
 		boolean allNumbersAreEqual = StringUtil.allNumbersAreEqual(dto.cpf());
 
-		if (allNumbersAreEqual) {
-			throw new InvalidCpfException(numbersAreEqual);
+		if (allNumbersAreEqual || dto.cpf().length() != 11) {
+			throw new InvalidCpfException(notValidCpf);
 		}
 
 		boolean cpfExists = repository.existsByCpf(cpf);
@@ -82,8 +82,8 @@ public class RestrictCpfService {
 	public void delete(String cpf) {
 		boolean allNumbersAreEqual = StringUtil.allNumbersAreEqual(cpf);
 
-		if (allNumbersAreEqual) {
-			throw new InvalidCpfException(numbersAreEqual);
+		if (allNumbersAreEqual || cpf.length() != 11) {
+			throw new InvalidCpfException(notValidCpf);
 		}
 
 		boolean cpfExists = repository.existsByCpf(cpf);

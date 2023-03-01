@@ -68,7 +68,7 @@ class ApiApplicationTests {
 	}
 
 	@Test
-	@DisplayName("Should throw InvalidCpfException when CPF has repeated digits")
+	@DisplayName("Should throw InvalidCpfException when CPF has repeated digits or more than 11 digits")
 	void testCreate_InvalidCpfException() {
 
 		assertThrows(InvalidCpfException.class, () -> service.create(invalidCpfDto));
@@ -120,7 +120,7 @@ class ApiApplicationTests {
 	}
 
 	@Test
-	@DisplayName("Should throw InvalidCpfException when CPF has repeated digits")
+	@DisplayName("Should throw InvalidCpfException when CPF has repeated digits or more than 11 digits")
 	void testFind_InvalidCpfException() {
 
 		assertThrows(InvalidCpfException.class, () -> service.findByCpf(invalidCpfDto.cpf()));
@@ -139,7 +139,7 @@ class ApiApplicationTests {
 	}
 
 	@Test
-	@DisplayName("Should throw InvalidCpfException when CPF has repeated digits")
+	@DisplayName("Should throw InvalidCpfException when CPF has repeated digits or more than 11 digits")
 	void testUpdate_InvalidCpfException() {
 		assertThrows(InvalidCpfException.class, () -> service.update(validCpf.getCpf(), invalidCpfDto));
 
@@ -167,7 +167,7 @@ class ApiApplicationTests {
 	}
 
 	@Test
-	@DisplayName("Should throw InvalidCpfException when CPF has repeated digits")
+	@DisplayName("Should throw InvalidCpfException when CPF has repeated digits or more than 11 digits")
 	void testDelete_InvalidCpfException() {
 		assertThrows(InvalidCpfException.class, () -> service.delete(invalidCpf.getCpf()));
 
