@@ -1,14 +1,7 @@
 # Desafio Técnico Backend
 
-<!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
+## :computer: Características do projeto
 
-![GitHub repo size](https://img.shields.io/github/repo-size/AgarbSpace/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/AgarbSpace/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/AgarbSpace/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/AgarbSpace/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/AgarbSpace/README-template?style=for-the-badge)
-
-## Características do projeto:
 - Este projeto faz o registro de CPF's com suspeitas de fraude.
 - Ele foi construído usando Java Spring Boot
 - Optei por usar a Arquitetura de camadas ou Arquitetura MVC (Model-View-Controller), pois ela traz uma Separação por Responsabilidades, Reutilização de Código, Desenvolvimento Paralelo, Facilidade de Teste e Flexibilidade.
