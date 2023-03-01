@@ -8,12 +8,13 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/AgarbSpace/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/AgarbSpace/README-template?style=for-the-badge)
 
-> Este projeto faz o registro de CPF's com suspeitas de fraude.
-> Ele foi construído usando Java Spring Boot
-> Optei por usar a Arquitetura de camadas ou Arquitetura MVC (Model-View-Controller), pois ela traz uma Separação por Responsabilidades, Reutilização de Código, Desenvolvimento Paralelo, Facilidade de Teste e Flexibilidade.
-> Optei também por usar o banco de dados H2 por ser um banco relacional mais prático para o desenvolvimento, além de trazer maior desempenho, poder ser executado em memória ou em disco e ter facilidade para a realização dos testes.
-> Eu fiz os testes unitários de todas as funcionalidades e add-cases que consegui ver, utilizando o JUnit 5 e Mockito por serem ferramentas amplamente utilizadas no ecossistema do SpringBoot além da praticidade para configurações, diversos Asserts para verificar o resultado do código, cobertura de código e criação de objetos simulados para ver comportamento de classes e métodos.
-> Utilizei estrutura de organização de pacotes mais comum na comunidade (com.example.app).
+## Características do projeto:
+- Este projeto faz o registro de CPF's com suspeitas de fraude.
+- Ele foi construído usando Java Spring Boot
+- Optei por usar a Arquitetura de camadas ou Arquitetura MVC (Model-View-Controller), pois ela traz uma Separação por Responsabilidades, Reutilização de Código, Desenvolvimento Paralelo, Facilidade de Teste e Flexibilidade.
+- Optei também por usar o banco de dados H2 por ser um banco relacional mais prático para o desenvolvimento, além de trazer maior desempenho, poder ser executado em memória ou em disco e ter facilidade para a realização dos testes.
+- Eu fiz os testes unitários de todas as funcionalidades e add-cases que consegui ver, utilizando o JUnit 5 e Mockito por serem ferramentas amplamente utilizadas no ecossistema do SpringBoot além da praticidade para configurações, diversos Asserts para verificar o resultado do código, cobertura de código e criação de objetos simulados para ver comportamento de classes e métodos.
+- Utilizei estrutura de organização de pacotes mais comum na comunidade (com.example.app).
 
 ## 💻 Pré-requisitos
 
