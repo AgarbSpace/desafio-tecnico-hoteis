@@ -45,34 +45,34 @@ public class RestrictCpfService {
 	}
 
 	public RestrictCpf findByCpf(String cpf) {
+		boolean allNumbersAreEqual = StringUtil.allNumbersAreEqual(cpf);
 
+		if (allNumbersAreEqual) {
+			throw new InvalidCpfException(numbersAreEqual);
+		}
+		
 		boolean cpfExists = repository.existsByCpf(cpf);
 
 		if (!cpfExists) {
 			throw new NotFoundCpfException(notFoundCpf);
 		}
 
-		boolean allNumbersAreEqual = StringUtil.allNumbersAreEqual(cpf);
-
-		if (allNumbersAreEqual) {
-			throw new InvalidCpfException(numbersAreEqual);
-		}
 
 		return repository.findByCpf(cpf);
 	}
 
 	@Transactional
 	public void update(String cpf, RestrictCpfDTO dto) {
+		boolean allNumbersAreEqual = StringUtil.allNumbersAreEqual(dto.cpf());
+
+		if (allNumbersAreEqual) {
+			throw new InvalidCpfException(numbersAreEqual);
+		}
+
 		boolean cpfExists = repository.existsByCpf(cpf);
 
 		if (!cpfExists) {
 			throw new NotFoundCpfException(notFoundCpf);
-		}
-
-		boolean allNumbersAreEqual = StringUtil.allNumbersAreEqual(cpf);
-
-		if (allNumbersAreEqual) {
-			throw new InvalidCpfException(numbersAreEqual);
 		}
 
 		repository.updateCpf(dto.cpf(), cpf);
@@ -80,16 +80,16 @@ public class RestrictCpfService {
 	
 	@Transactional
 	public void delete(String cpf) {
-		boolean cpfExists = repository.existsByCpf(cpf);
-
-		if (!cpfExists) {
-			throw new NotFoundCpfException(notFoundCpf);
-		}
-
 		boolean allNumbersAreEqual = StringUtil.allNumbersAreEqual(cpf);
 
 		if (allNumbersAreEqual) {
 			throw new InvalidCpfException(numbersAreEqual);
+		}
+
+		boolean cpfExists = repository.existsByCpf(cpf);
+
+		if (!cpfExists) {
+			throw new NotFoundCpfException(notFoundCpf);
 		}
 
 		repository.deleteByCpf(cpf);
