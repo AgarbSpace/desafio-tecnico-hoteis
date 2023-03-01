@@ -35,24 +35,25 @@ Uma vez que todas essas ferramentas e dependências estejam instaladas e configu
 ```
 ou clicando no botão "Run" na sua IDE.
 
-Para rodar utilizando o Docker, certifique-se que tenha ele instalado, utilize o comando 
+Para rodar utilizando o Docker, certifique-se que tenha ele instalado.
+Caso dentro da sua pasta target não tenha um arquivo .jar, utilize o comando:
 
 ```
 <mvn package>
 ```
-para buildar o projeto e criar uma pasta target com seu arquivo .jar
+Para buildar o projeto e criar uma pasta target com seu arquivo .jar
 Veja se está tudo ok no arquivo Dockerfile
-Faça o build da imagem utilizando o comando
+Faça o build da imagem utilizando o comando:
 
 ```
 < docker build -t nome-da-imagem . >
 ```
-para rodar a imagem utilize 
+Para rodar a imagem utilize:
 
 ```
 < docker run -p 8080:8080 nome-da-imagem >
 ```
-e para certificar que o contêiner está em execução utilize 
+E para certificar que o contêiner está em execução utilize:
 
 ```
 < docker ps >
