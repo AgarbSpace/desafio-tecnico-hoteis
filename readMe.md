@@ -40,7 +40,7 @@ Uma vez que todas essas ferramentas e dependências estejam instaladas e configu
 Para usar <Desafio_Técnico_BackEnd>, siga estas etapas:
 
 Caso o programa esteja rodando localmente, basta acessar o endereço <http://localhost:8080/cpf>
-##### O método GET em </cpf> vai trazer a lista de todos os cpfs registrados.
+##### O método GET em /cpf vai trazer a lista de todos os cpfs registrados.
 ##### O método GET em </cpf/{cpf}> vai trazer os dados do cpf em específico registrado.
 ##### O método POST em </cpf> vai registrar um cpf.
 ##### O método PUT em </cpf/{cpf}> vai atualizar aquele cpf específico enviado pelo parâmetro para parâmetro que foi enviado pelo body da requisição.
