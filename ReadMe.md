@@ -36,7 +36,7 @@ Uma vez que todas essas ferramentas e dependências estejam instaladas e configu
 ou clicando no botão "Run" na sua IDE.
 
 Para rodar utilizando o Docker, certifique-se que tenha ele instalado.
-Caso dentro da sua pasta target não tenha um arquivo .jar, utilize o comando:
+- Caso dentro da sua pasta target não tenha um arquivo .jar, utilize o comando:
 
 ```
 <mvn package>
