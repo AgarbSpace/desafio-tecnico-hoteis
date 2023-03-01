@@ -42,7 +42,7 @@ Para usar <Desafio_Técnico_BackEnd>, siga estas etapas:
 Caso o programa esteja rodando localmente, basta acessar o endereço <http://localhost:8080/cpf>
 ##### O método GET em /cpf vai trazer a lista de todos os cpfs registrados.
 ##### O método GET em </cpf/{cpf}> vai trazer os dados do cpf em específico registrado.
-##### O método POST em </cpf> vai registrar um cpf.
+##### O método POST em /cpf vai registrar um cpf.
 ##### O método PUT em </cpf/{cpf}> vai atualizar aquele cpf específico enviado pelo parâmetro para parâmetro que foi enviado pelo body da requisição.
 ##### O método DELETE em </cpf/{cpf}> vai deletar aquele cpf específico do parâmetro.
 #### Os métodos POST e PUT esperam um corpo no formato {cpf: String}, sendo o cpf sem formatação xxx.xxx.xxx-xx
